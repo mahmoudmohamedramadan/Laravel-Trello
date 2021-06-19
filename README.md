@@ -1,62 +1,112 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Laravel Trello Project
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## References
 
-## About Laravel
+<ul>
+<li><a href="https://github.com/laravel-notification-channels/trello">Laravel Trello</a></li>
+<li><a href="https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/">Trello API</a></li>
+</ul>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Getting Started
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Create a Trello Account
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+So at the first, you should have a Trello account, if you do NOT have an account, <a href="https://trello.com">Create a new one</a>, then create your WorkSpace as shown <a href="https://github.com/mahmoudmohamedramadan/Laravel-Trello/tree/master/public/img/create_workspace.png">here</a>.
 
-## Learning Laravel
+### Laravel Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+if you are NOT install Laravel Installer as a global Composer dependency, run the NEXT command
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```
+composer create-project laravel/laravel Laravel_Trello
+```
 
-## Laravel Sponsors
+and if you want to install Laravel Installer as a global Composer dependency, run the NEXT command
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```
+composer global require laravel/installer
+```
 
-### Premium Partners
+then run the NEXT command
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+```
+laravel new Laravel_Trello
+```
 
-## Contributing
+### Package Installation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**before embarking on installing this package, you should remove `guzzlehttp/guzzle` package to fades away any ERROR happens**
 
-## Code of Conduct
+to remove `guzzlehttp/guzzle` package, run the NEXT command
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+composer remove guzzlehttp/guzzle
+```
 
-## Security Vulnerabilities
+and to install `laravel-notification-channels/trello` package, run the NEXT command
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
+composer require laravel-notification-channels/trello
+```
 
-## License
+### Setting up the Trello service
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+after installation, add your Trello REST API Key to your `config/services.php`
+
+```PHP
+// config/services.php
+...
+'trello' => [
+    'key' => env('TRELLO_API_KEY'),
+],
+...
+```
+
+and to get your API Key visit <a href="https://trello.com/app-key">App Key</a>, and from the same page also you can take your `Token`, **do NOT forget to put `TRELLO_API_KEY=PAST_YOUR_API_KEY_HERE` into `.env` file**
+
+### Usage
+
+to create your notification file, run the NEXT command
+
+```
+php artisan make:notification TrelloNotification
+```
+
+after creation, copy my code in <a href="https://github.com/mahmoudmohamedramadan/Laravel-Trello/tree/master/app/Notifications/TrelloNotification.php">TrelloNotification.php</a>
+
+
+also, to create your controller, run the NEXT command
+
+```
+php artisan make:controller UserController
+```
+
+after creation, copy my code in <a href="https://github.com/mahmoudmohamedramadan/Laravel-Trello/tree/master/app/Http/Controllers/UserController.php">UserController.php</a>
+
+after we've create `UserController.php`, we need to add a new route as show in <a href="https://github.com/mahmoudmohamedramadan/Laravel-Trello/tree/master/routes/web.php">web.php</a>
+
+also, we need to create an awesome form, So we should run the NEXT command
+
+```
+composer require laravel/ui
+```
+
+also, run the NEXT command to get all `Auth` views
+
+```
+php artisan ui bootstrap --auth
+```
+
+and finally copy my code in <a href="https://github.com/mahmoudmohamedramadan/Laravel-Trello/tree/master/resources/views/layouts/app.blade.php">app.blade.php</a> and, <a href="https://github.com/mahmoudmohamedramadan/Laravel-Trello/tree/master/resources/views/home.blade.php">home.blade.php</a>
+
+and to notify the user, put `routeNotificationForTrello` function into `User.php` model as shown <a href="https://github.com/mahmoudmohamedramadan/Laravel-Trello/tree/master/app/Models/User.php">User.php</a>
+
+as you've seen in `routeNotificationForTrello.php`, this function returns an array WITH `token` (which already we've got), and `idList`, and to get `idList` after we've created a new Workspace, do the NEXT steps
+
+<ol>
+<li>Create a new Card as shown <a href="https://github.com/mahmoudmohamedramadan/Laravel-Trello/tree/master/public/img/click_card.png">here</a>, then click it</li>
+<li>Click Share button as shown <a href="https://github.com/mahmoudmohamedramadan/Laravel-Trello/tree/master/public/img/share_card.png">here</a></li>
+<li>Finally click Export JSON link</li>
+</ol>
+
+congratulations ! you've finally got `idList` 🎉🤙
