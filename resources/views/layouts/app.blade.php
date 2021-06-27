@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ $view_name }} | {{ env('APP_NAME', 'Laravel-Trello') }}</title>
+    <title>{{ $view_name }} | {{ env('APP_NAME', 'Laravel Trello') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
