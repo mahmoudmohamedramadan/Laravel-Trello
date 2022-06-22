@@ -694,24 +694,24 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.7",
+            "version": "6.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "724562fa861e21a4071c652c8a159934e4f05592"
+                "reference": "a52f0440530b54fa079ce76e8c5d196a42cad981"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/724562fa861e21a4071c652c8a159934e4f05592",
-                "reference": "724562fa861e21a4071c652c8a159934e4f05592",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/a52f0440530b54fa079ce76e8c5d196a42cad981",
+                "reference": "a52f0440530b54fa079ce76e8c5d196a42cad981",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/promises": "^1.0",
-                "guzzlehttp/psr7": "^1.6.1",
+                "guzzlehttp/psr7": "^1.9",
                 "php": ">=5.5",
-                "symfony/polyfill-intl-idn": "^1.17.0"
+                "symfony/polyfill-intl-idn": "^1.17"
             },
             "require-dev": {
                 "ext-curl": "*",
@@ -789,7 +789,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/6.5.7"
+                "source": "https://github.com/guzzle/guzzle/tree/6.5.8"
             },
             "funding": [
                 {
@@ -805,7 +805,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-09T21:36:50+00:00"
+            "time": "2022-06-20T22:16:07+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -893,16 +893,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.8.5",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268"
+                "reference": "e98e3e6d4f86621a9b75f623996e6bbdeb4b9318"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/337e3ad8e5716c15f9657bd214d16cc5e69df268",
-                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/e98e3e6d4f86621a9b75f623996e6bbdeb4b9318",
+                "reference": "e98e3e6d4f86621a9b75f623996e6bbdeb4b9318",
                 "shasum": ""
             },
             "require": {
@@ -923,7 +923,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -983,7 +983,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.8.5"
+                "source": "https://github.com/guzzle/psr7/tree/1.9.0"
             },
             "funding": [
                 {
@@ -999,7 +999,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-20T21:51:18+00:00"
+            "time": "2022-06-20T21:43:03+00:00"
         },
         {
             "name": "laravel-notification-channels/trello",
@@ -1054,16 +1054,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.83.16",
+            "version": "v8.83.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "6be5abd144faf517879af7298e9d79f06f250f75"
+                "reference": "2cf142cd5100b02da248acad3988bdaba5635e16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/6be5abd144faf517879af7298e9d79f06f250f75",
-                "reference": "6be5abd144faf517879af7298e9d79f06f250f75",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/2cf142cd5100b02da248acad3988bdaba5635e16",
+                "reference": "2cf142cd5100b02da248acad3988bdaba5635e16",
                 "shasum": ""
             },
             "require": {
@@ -1223,7 +1223,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-06-07T15:09:06+00:00"
+            "time": "2022-06-21T14:38:31+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -5834,16 +5834,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.14.10",
+            "version": "v1.14.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "0ea5d683af4d189071efcdb9e83946c10dab82c3"
+                "reference": "6edf45a247b3688e0d07e149570a62fd9bc11c73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/0ea5d683af4d189071efcdb9e83946c10dab82c3",
-                "reference": "0ea5d683af4d189071efcdb9e83946c10dab82c3",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/6edf45a247b3688e0d07e149570a62fd9bc11c73",
+                "reference": "6edf45a247b3688e0d07e149570a62fd9bc11c73",
                 "shasum": ""
             },
             "require": {
@@ -5890,7 +5890,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2022-06-09T07:10:28+00:00"
+            "time": "2022-06-13T18:32:48+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -6768,16 +6768,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.20",
+            "version": "9.5.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "12bc8879fb65aef2138b26fc633cb1e3620cffba"
+                "reference": "0e32b76be457de00e83213528f6bb37e2a38fcb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/12bc8879fb65aef2138b26fc633cb1e3620cffba",
-                "reference": "12bc8879fb65aef2138b26fc633cb1e3620cffba",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0e32b76be457de00e83213528f6bb37e2a38fcb1",
+                "reference": "0e32b76be457de00e83213528f6bb37e2a38fcb1",
                 "shasum": ""
             },
             "require": {
@@ -6811,7 +6811,6 @@
                 "sebastian/version": "^3.0.2"
             },
             "require-dev": {
-                "ext-pdo": "*",
                 "phpspec/prophecy-phpunit": "^2.0.1"
             },
             "suggest": {
@@ -6855,7 +6854,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.20"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.21"
             },
             "funding": [
                 {
@@ -6867,7 +6866,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-01T12:37:26+00:00"
+            "time": "2022-06-19T12:14:25+00:00"
         },
         {
             "name": "sebastian/cli-parser",
